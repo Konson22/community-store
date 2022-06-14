@@ -1,0 +1,103 @@
+.items-wraper {
+  display: grid;
+  grid-gap: 2vmin;
+}
+.items-wraper .item-card {
+  background-color: var(--white);
+}
+.items-wraper .item-card .item-card-body {
+  padding: 0.5rem;
+}
+.items-wraper .item-card .price-text {
+  margin-right: 1rem;
+  font-size: 1.3rem;
+}
+.items-wraper .item-card .price-text.active {
+  font-weight: 700;
+}
+.items-wraper .item-card .fa-star {
+  color: var(--yellow);
+}
+.items-wraper .my-btn {
+  background-color: var(--blue-bg);
+}
+
+.g-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+.g-5 .item-card-image {
+  height: 130px;
+}
+
+.img-placeholder {
+  height: 150px;
+  background-image: linear-gradient(130deg, rgb(150, 150, 150), rgba(10, 10, 10, 0.747));
+}
+
+.item-detail-container {
+  margin-bottom: 1.5rem;
+  display: flex;
+  background-color: var(--gray);
+}
+.item-detail-container .item-image {
+  padding: 1rem;
+  flex: 1;
+  height: 300px;
+  min-height: 300px;
+  max-height: 300px;
+}
+.item-detail-container .item-text {
+  padding: 1rem;
+  flex: 1;
+}
+.item-detail-container .item-text .price-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.item-detail-container ul {
+  padding: 0;
+  margin: 0;
+}
+.item-detail-container ul span {
+  margin-left: 0.5rem;
+}
+.item-detail-container ul li {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 950px) {
+  .items-wraper .item-card .price-text {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .g-5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .g-5 .item-card-image {
+    height: 120px;
+  }
+
+  .item-detail-container {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .item-detail-container .item-image {
+    padding: 0;
+    width: 100%;
+    height: 200px !important;
+    min-height: 200px !important;
+    max-height: 200px !important;
+  }
+  .item-detail-container .item-text {
+    padding: 0.5rem;
+    width: 100%;
+  }
+  .item-detail-container .item-text .price-value {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+}/*# sourceMappingURL=shop.css.map */

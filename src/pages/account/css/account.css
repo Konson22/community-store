@@ -1,0 +1,70 @@
+.user-account-content {
+  background-color: var(--gray);
+}
+
+.user-account-profile {
+  padding: 1rem;
+  background-color: rgb(33, 200, 230);
+}
+.user-account-profile .profile-image {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.user-account-profile .profile-text {
+  padding-left: 0.6rem;
+  flex: 1;
+}
+
+.user-account-nav .account-links-wraper {
+  padding: 0.4rem;
+  display: flex;
+  align-items: center;
+}
+.user-account-nav .sidebar-nav-icon {
+  font-size: 1.8rem;
+}
+.user-account-nav .nav-link {
+  color: inherit;
+}
+
+@media screen and (max-width: 950px) {
+  .user-account-profile {
+    margin: 0.5rem 0;
+    padding: 0.4rem;
+    background-color: var(--gray);
+  }
+  .user-account-profile .profile-image {
+    width: 60px;
+    height: 60px;
+  }
+  .user-account-profile .profile-text {
+    padding-left: 0.6rem;
+  }
+
+  .user-account-nav {
+    margin: 0.5rem 0;
+    display: grid;
+    grid-gap: 3vmin;
+    background-color: var(--gray);
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .user-account-nav .account-links-wraper {
+    padding: 0.7rem 0;
+    flex-direction: column;
+  }
+  .user-account-nav .sidebar-nav-icon {
+    color: var(--blue-bg);
+    font-size: 1.8rem;
+  }
+
+  .user-account-header {
+    padding: 0 0.5rem;
+    margin: 1rem 0;
+  }
+
+  .back-btn {
+    margin-right: 0.5rem;
+  }
+}/*# sourceMappingURL=account.css.map */

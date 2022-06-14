@@ -1,0 +1,174 @@
+.form-wraper {
+  padding: 1rem;
+  width: 100%;
+  position: relative;
+}
+.form-wraper .form-content {
+  padding: 2.5rem;
+  width: 40%;
+  color: rgb(255, 255, 255);
+  background-color: rgb(240, 238, 238);
+  background-image: linear-gradient(135deg, #177cdb, rgb(39, 180, 245));
+}
+.form-wraper .input-content {
+  margin-bottom: 1rem;
+}
+.form-wraper .input-content label {
+  margin-bottom: 0.3rem;
+}
+.form-wraper .input-content input, .form-wraper .input-content select, .form-wraper .input-content textarea {
+  padding: 0.6rem;
+  height: 3rem;
+  border: none;
+  background-color: var(--white);
+  outline: none;
+  width: 100%;
+}
+.form-wraper .input-content textarea {
+  height: 6rem;
+  resize: none;
+}
+.form-wraper .btn-loader {
+  margin-right: 0.5rem;
+  height: 1.3rem;
+}
+
+.form-header {
+  margin-bottom: 1rem;
+}
+
+input[type=file] {
+  display: none;
+}
+
+.file-upload-button {
+  background-color: rgb(62, 179, 62) !important;
+}
+
+.loader-wraper {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.692);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 120;
+}
+.loader-wraper .loader-content {
+  padding: 5rem;
+  height: 40vh;
+  width: 40%;
+  border-radius: 6px;
+  background-color: var(--white);
+}
+.loader-wraper .loading-bar {
+  height: 1.5rem;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.725rem;
+  background-color: rgb(181, 181, 247);
+  position: relative;
+}
+.loader-wraper .loading-fill {
+  height: 1.5rem;
+  border-radius: 0.725rem;
+  background-image: linear-gradient(150deg, rgb(55, 55, 247), rgb(216, 3, 188));
+}
+.loader-wraper .loading-percent {
+  width: 100%;
+  height: 100%;
+  color: var(--white);
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.loader-wraper .loading-text {
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.loader-wraper .loading-done-wraper {
+  -webkit-animation: rotate 0.3s ease-in-out;
+          animation: rotate 0.3s ease-in-out;
+}
+.loader-wraper .loading-done-wraper .loading-done-content {
+  width: 110px;
+  height: 110px;
+  border: 4px solid rgb(1, 226, 1);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.loader-wraper .loading-done-wraper .icon {
+  color: rgb(1, 226, 1);
+  font-size: 4rem;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@media screen and (max-width: 950px) {
+  .form-wraper {
+    padding: 1rem;
+  }
+  .form-wraper .form-content {
+    padding: 1rem;
+    width: 100%;
+    background-color: rgb(240, 238, 238);
+  }
+  .form-wraper .input-content {
+    margin-bottom: 1rem;
+  }
+  .form-wraper .input-content label {
+    margin-bottom: 0.3rem;
+  }
+  .form-wraper .input-content input, .form-wraper .input-content select, .form-wraper .input-content textarea {
+    padding: 0.6rem;
+    height: 3rem;
+    border: none;
+    background-color: var(--white);
+    outline: none;
+    width: 100%;
+  }
+  .form-wraper .input-content textarea {
+    height: 6rem;
+    resize: none;
+  }
+  .form-wraper .btn-loader {
+    margin-right: 0.5rem;
+    height: 1.3rem;
+  }
+
+  .loader-wraper .loader-content {
+    padding: 5rem 1rem;
+    height: auto;
+    width: 90%;
+  }
+  .loader-wraper .loading-text {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+  .loader-wraper .loading-done-wraper .loading-done-content {
+    width: 80px;
+    height: 80px;
+    border: 3px solid rgb(1, 226, 1);
+  }
+  .loader-wraper .loading-done-wraper .icon {
+    font-size: 2.5rem;
+  }
+}/*# sourceMappingURL=forms.css.map */

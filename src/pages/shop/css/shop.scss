@@ -1,0 +1,107 @@
+
+.items-wraper{
+    display: grid;
+    grid-gap: 2vmin;
+    .item-card{
+        background-color: var(--white);
+        .item-card-body{
+            padding: .5rem;
+        }
+        .price-text{
+            margin-right: 1rem;
+            font-size: 1.3rem;
+        }
+        .price-text.active{
+            font-weight: 700;
+        }
+        .fa-star{
+            color: var(--yellow);
+        }
+    }
+    .my-btn{
+        background-color: var(--blue-bg);
+    }
+}
+.g-5{
+    .item-card-image{
+        height: 130px;
+    }
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.img-placeholder{
+    height:150px;
+    background-image: linear-gradient(130deg, rgba(150, 150, 150), rgba(10, 10, 10, 0.747));
+}
+//  start of item-detail-container
+.item-detail-container{
+    margin-bottom: 1.5rem;
+    display:flex;
+    background-color: var(--gray);
+    .item-image{
+        padding:1rem;
+        flex:1;
+        height: 300px;
+        min-height: 300px;
+        max-height: 300px;
+    }
+    .item-text{
+        padding:1rem;
+        flex:1;
+        .price-value{
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+    }
+    ul{
+        padding:0;
+        margin: 0;
+        span{
+            margin-left: .5rem;
+        }
+        li{
+            margin:.5rem 0;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+@media screen and (max-width:950px) {
+    .items-wraper{
+        .item-card{
+            .price-text{
+                margin: 0;
+                font-size: 1.1rem;
+            }
+        }
+    }
+    .g-5{
+        grid-template-columns: repeat(2, 1fr);
+        .item-card-image{
+            height: 120px;
+        }
+    }
+
+    //  start of item-detail-container
+    .item-detail-container{
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+        display:block;
+        .item-image{
+            padding:0;
+            width:100%;
+            height: 200px !important;
+            min-height: 200px !important;
+            max-height: 200px !important;
+        }
+        .item-text{
+            padding:.5rem;
+            width:100%;
+            .price-value{
+                font-size: 1.2rem;
+                font-weight: 700;
+            }
+        }
+    }
+}

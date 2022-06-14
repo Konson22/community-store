@@ -1,0 +1,74 @@
+
+
+.user-account-content{
+    background-color: var(--gray);
+}
+.user-account-profile{
+    padding:1rem;
+    background-color: rgb(33, 200, 230);
+    .profile-image{
+        width:70px;
+        height:70px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    .profile-text{
+        padding-left: .6rem;
+        flex:1;
+    }
+}
+
+.user-account-nav{
+    .account-links-wraper{
+        padding:.4rem;
+        display:flex;
+        align-items: center;
+    }
+    .sidebar-nav-icon{
+        font-size: 1.8rem;
+    }
+    .nav-link{
+        color: inherit;
+    }
+}
+
+
+@media screen and (max-width:950px){
+    .user-account-profile{
+        margin: .5rem 0;
+        padding:.4rem;
+        background-color: var(--gray);
+        .profile-image{
+            width:60px;
+            height:60px;
+        }
+        .profile-text{
+            padding-left: .6rem;
+        }
+    }
+
+    .user-account-nav{
+        margin: .5rem 0;
+        display:grid;
+        grid-gap: 3vmin;
+        background-color: var(--gray);
+        grid-template-columns: repeat(3, 1fr);
+        .account-links-wraper{
+            padding:.7rem 0;
+            flex-direction: column;
+        }
+        .sidebar-nav-icon{
+            color: var(--blue-bg);
+            font-size: 1.8rem;
+        }
+    }
+
+    .user-account-header{
+        padding: 0 .5rem;
+        margin: 1rem 0;
+    }
+
+    .back-btn{
+        margin-right: .5rem;
+    }
+}

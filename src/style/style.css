@@ -1,0 +1,148 @@
+@font-face {
+  font-family: "Staatliches";
+  src: url("../assets/fonts/Staatliches-Regular.ttf");
+}
+@font-face {
+  font-family: "Southmore";
+  src: url("../assets/fonts/Southmore.ttf");
+}
+@font-face {
+  font-family: "SignikaNegative";
+  src: url("../assets/fonts/SignikaNegative-SemiBold.ttf");
+}
+@font-face {
+  font-family: "SignikaNegative-Light";
+  src: url("../assets/fonts/SignikaNegative-Light.ttf");
+}
+:root {
+  --blue-bg:#7ae401;
+  --yellow:#7ae401;
+  --gray:rgb(247, 245, 245);
+  --white:#fff;
+  --mrg-top:2rem;
+}
+
+body {
+  color: rgb(128, 126, 126);
+  background-color: var(--white);
+}
+
+p, span, i {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  color: rgb(121, 121, 121);
+}
+
+.elips-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.elips-text.l2 {
+  -webkit-line-clamp: 2;
+}
+
+.elips-text.l3 {
+  -webkit-line-clamp: 3;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+.my-container {
+  padding: 0 5%;
+}
+
+.app-content {
+  margin-top: 0.6rem;
+}
+.app-content .app-content-sidebar {
+  flex-basis: 24%;
+}
+.app-content .app-content-sidebar .sidebar-content {
+  background-color: var(--gray);
+}
+.app-content .app-content-sidebar .sidebar-content .sidebar-content-header {
+  padding: 0.5rem 1rem;
+  background-image: linear-gradient(120deg, #177cdb, rgb(64, 189, 247));
+}
+.app-content .app-content-sidebar .sidebar-content .sidebar-body {
+  padding: 1rem;
+}
+.app-content .app-content-main {
+  margin-left: 0.6rem;
+  flex: 1;
+}
+
+.section-container {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--gray);
+}
+
+.section-header {
+  margin-bottom: 1rem;
+}
+
+iframe {
+  display: none !important;
+}
+
+.lg-screen {
+  display: block !important;
+}
+
+.sm-screen, .bottom-navbar {
+  display: none;
+}
+
+@media screen and (max-width: 950px) {
+  .lg-screen, .nav-search-wraper, .cart-wraper,
+.app-content .app-content-sidebar,
+.nav-top-content, .categories-container, .dashboard-link, .links-container {
+    display: none !important;
+  }
+
+  .sm-screen {
+    display: block !important;
+  }
+
+  .mobile-menu-wraper {
+    display: flex;
+    align-items: center;
+  }
+
+  .my-container {
+    padding: 0;
+    width: 100%;
+  }
+
+  .app-wraper {
+    margin-bottom: 4rem;
+  }
+
+  .app-content {
+    margin: 0;
+  }
+  .app-content .app-content-main {
+    padding: 0 0.5rem;
+    margin: 0;
+  }
+
+  .section-container {
+    padding: 0;
+    margin-bottom: 1rem;
+    background-color: var(--white);
+  }
+
+  .section-header {
+    margin: 1rem 0;
+  }
+}/*# sourceMappingURL=style.css.map */
