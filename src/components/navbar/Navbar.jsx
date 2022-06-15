@@ -3,7 +3,8 @@ import {NavLink} from 'react-router-dom'
 import {FaShoppingCart, FaRegUser, FaRandom, FaRegHeart, FaFacebook, FaTwitter, FaInstagram} from 'react-icons/fa'
 import {NavDropdown} from 'react-bootstrap'
 import { categoriesList } from '../../assets/data/data'
-import logo from '../../assets/images/logomage.png'
+// import logo from '../../assets/images/logomage.png'
+import logo from '../../assets/images/pngaaa.com-3108680.png'
 import { useAuthContext } from '../../contexts/AuthUserContextProvider'
 import {BsHouse, BsCartDash, BsSearch, BsBell} from 'react-icons/bs'
 import {FiPlusCircle} from 'react-icons/fi'
@@ -85,7 +86,7 @@ export default function Navbar() {
       <div className="nav-center-content d-flex justify-content-between align-items-center">
         <div className="logo-wraper d-flex align-items-center">
           <img src={logo} alt='logo' />
-          <div className="logo-text">2XConnect</div>
+          {/* <div className="logo-text">2XConnect</div> */}
         </div>
         <div className="nav-search-wraper">
           <SearchBar />

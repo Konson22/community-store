@@ -3,7 +3,7 @@ import Items from '../../components/items/Items'
 
 export default function UseItems({items, AccountBackBtn}) {
   return (
-    <div className="section-container">
+    <div className="section-container account-section">
       <div className="user-account-header d-flex align-items-center">
         {AccountBackBtn}
         <h5>My Adverts</h5>

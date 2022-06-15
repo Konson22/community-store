@@ -1,5 +1,5 @@
 .user-account-content {
-  background-color: var(--gray);
+  background-color: var(--white);
 }
 
 .user-account-profile {
@@ -17,6 +17,9 @@
   flex: 1;
 }
 
+.user-account-nav {
+  padding: 1rem;
+}
 .user-account-nav .account-links-wraper {
   padding: 0.4rem;
   display: flex;
@@ -30,10 +33,14 @@
 }
 
 @media screen and (max-width: 950px) {
+  .account-section {
+    margin-top: 0.5rem;
+  }
+
   .user-account-profile {
     margin: 0.5rem 0;
     padding: 0.4rem;
-    background-color: var(--gray);
+    background-color: var(--white);
   }
   .user-account-profile .profile-image {
     width: 60px;
@@ -47,7 +54,7 @@
     margin: 0.5rem 0;
     display: grid;
     grid-gap: 3vmin;
-    background-color: var(--gray);
+    background-color: var(--white);
     grid-template-columns: repeat(3, 1fr);
   }
   .user-account-nav .account-links-wraper {
@@ -61,7 +68,7 @@
 
   .user-account-header {
     padding: 0 0.5rem;
-    margin: 1rem 0;
+    margin-bottom: 1rem;
   }
 
   .back-btn {

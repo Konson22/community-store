@@ -5,35 +5,35 @@ const ApiProvider = createContext()
 export const useApis = () => useContext(ApiProvider)
 
 const initailState = {
-    loading:false,
-    error:'',
-    message:'',
-    user:null,
-    items:[]
+  loading:false,
+  error:'',
+  message:'',
+  user:null,
+  items:[]
 }
 
 
 const reducers = (state, action) => {
-    switch (action.type){
-        case 'isLoading':{
-            return {...state, loading:true}
-        }
-        case 'login':{
-            return {...state, loading:true}
-        }
+  switch (action.type){
+    case 'isLoading':{
+      return {...state, loading:true}
     }
+    case 'login':{
+      return {...state, loading:true}
+    }
+  }
 }
 
 
 export default function ContextProvider({children}) {
 
-    const [state, dispatch] = useReducer(initailState, reducers);
+  const [state, dispatch] = useReducer(initailState, reducers);
 
-    return (
-        <ApiProvider.Provider value={{state, dispatch}}>
-            {children}
-        </ApiProvider.Provider>
-    )
+  return (
+    <ApiProvider.Provider value={{state, dispatch}}>
+      {children}
+    </ApiProvider.Provider>
+  )
 }
 
 

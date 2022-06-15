@@ -16,17 +16,15 @@
 }
 
 :root{
-    // --blue-bg:#3d6ae6;
-    --blue-bg:#7ae401;
-    --yellow:#7ae401;
-    --gray:rgb(247, 245, 245);
+    --green:#dd7d0e;
+    --dark:#6b6b6b;
     --white:#fff;
     --mrg-top:2rem;
 }
 
 body{
     color: rgb(128, 126, 126);
-    background-color: var(--white);
+    background-color: rgb(230, 230, 230);
 }
 
 p, span, i{
@@ -63,10 +61,10 @@ img{
     .app-content-sidebar{
         flex-basis: 24%;
         .sidebar-content{
-            background-color: var(--gray);
+            background-color: var(--white);
             .sidebar-content-header{
                 padding:.5rem 1rem;
-                background-image: linear-gradient(120deg, #177cdb, rgb(64, 189, 247));
+                background-color: var(--dark);
             }
             .sidebar-body{
                 padding:1rem;
@@ -76,13 +74,14 @@ img{
     .app-content-main{
         margin-left: .6rem;
         flex:1;
+        // background-color: var(--white);
     }
 }
 
 .section-container{
     padding: 1rem;
     margin-bottom: 1.5rem;
-    background-color: var(--gray);
+    background-color: var(--white);
 }
 .section-header{
     margin-bottom: 1rem;
@@ -137,12 +136,12 @@ iframe{
 
     
     .section-container{
-        padding: 0;
+        padding: .6rem;
         margin-bottom: 1rem;
         background-color: var(--white);
     }
     .section-header{
-        margin: 1rem 0;
+        margin-bottom: 1rem;
     }
     
 }

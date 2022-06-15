@@ -1,25 +1,21 @@
 
+
 .items-wraper{
     display: grid;
     grid-gap: 2vmin;
     .item-card{
-        background-color: var(--white);
+        background-color: rgb(243, 241, 241);
         .item-card-body{
             padding: .5rem;
         }
         .price-text{
             margin-right: 1rem;
-            font-size: 1.3rem;
-        }
-        .price-text.active{
-            font-weight: 700;
-        }
-        .fa-star{
-            color: var(--yellow);
+            font-size: 1.2rem;
+            font-weight: 600;
         }
     }
     .my-btn{
-        background-color: var(--blue-bg);
+        background-color: var(--green);
     }
 }
 .g-5{
@@ -35,9 +31,9 @@
 }
 //  start of item-detail-container
 .item-detail-container{
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     display:flex;
-    background-color: var(--gray);
+    background-color: var(--white);
     .item-image{
         padding:1rem;
         flex:1;
@@ -68,6 +64,7 @@
 }
 
 @media screen and (max-width:950px) {
+   
     .items-wraper{
         .item-card{
             .price-text{
@@ -91,9 +88,9 @@
         .item-image{
             padding:0;
             width:100%;
-            height: 200px !important;
-            min-height: 200px !important;
-            max-height: 200px !important;
+            height: 250px !important;
+            min-height: 250px !important;
+            max-height: 250px !important;
         }
         .item-text{
             padding:.5rem;

@@ -2,11 +2,49 @@
 .header-wraper{
     margin: .7rem 0;
     display:flex;
-    .hero-wraper{
-        height:350px;
+    .carousel-wraper{
         flex-basis: 68%;
-        background-color: var(--gray);
-        background-size: 100% 100%;
+        position:relative;
+        .carousel-hero{
+            height:350px;
+            flex:1;
+            background-color: red;
+            background-size: 100% 100%;
+        }
+        .carousel-hero-content{
+            padding:2.5rem;
+            color:var(--white);
+            width:70%;
+        }
+        h1{
+            color:var(--white);
+            font-size: 2.5rem;
+        }
+        .hHJTFD{
+            margin:0 !important;
+        }
+        .hHJTFD{
+            background: none !important;
+            background-color: transparent !important;
+        }
+        .sc-bczRLJ{
+            padding: 0 !important;
+            position: absolute;
+            font-size: 1.2rem !important;
+            top:auto;
+            z-index: 30 !important;
+        }
+        
+        .rec-arrow-left{
+            left:1rem;
+        }
+        .rec-arrow-right{
+            right:1rem;
+        }
+        
+        .rec-pagination{
+            display: none !important;
+        }
     }
     .header-categories{
         margin-left: .6rem;
@@ -15,12 +53,41 @@
         grid-gap: 10px;
         grid-template-columns: repeat(2, 1fr);
         .catergory-card{
-            background-color: var(--gray);
+            background-color: var(--white);
             height: 110px;
             object-fit: cover;
             position: relative;
             border-radius: 6px;
             overflow: hidden;
+        }
+        span{
+            padding:.7rem;
+            width:100%;
+            height:100%;
+            color:var(--white);
+            font-size: 1rem;
+            font-weight: 700;
+            display:flex;
+            align-items: flex-end;
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.521), rgba(0, 0, 0, 0.21));
+            position:absolute;
+            top:0;
+            left:0;
+        }
+    }
+}
+
+
+
+
+.feautures-wraper{
+    padding:1rem;
+    background-color:var(--white);
+    .feauture-card{
+        .feauture-card-icon{
+            margin-top: -.6rem;
+            margin-right: .7rem;
+            font-size:3rem;
         }
     }
 }
@@ -46,9 +113,40 @@
         margin: 0;
         height:auto;
         display: block;
+        .carousel-wraper{
+            flex-basis: 100%;
+            .carousel-hero{
+                height:28vh;
+                flex:1;
+            }
+            .carousel-hero-content{
+                padding:1rem;
+                width:90%;
+            }
+            h1{
+                color:var(--white);
+                font-size: 1.7rem;
+                line-height: 35px;
+            }
+            .sc-bczRLJ{
+                display:none !important;
+            }
+            .rec-pagination{
+                display: flex !important;
+                position:absolute;
+                bottom:0;
+            }
+        }
         .hero-wraper{
             width:100%;
             height:30vh;
+            .hero-content {
+                padding:1.5rem;
+                width:100%;
+            }
+            h1{
+                font-size: 1.9rem;
+            }
         }
         .header-categories{
             margin: .7rem 0;
@@ -57,9 +155,28 @@
             grid-gap: 6px;
             grid-template-columns: repeat(3, 1fr);
             .catergory-card{
-                height: 90px;
+                height: 80px;
+            }
+            span{
+                padding:.5rem;
+                font-size: .9rem;
+                font-weight: 500;
             }
         }
     }
-    
+    .feautures-wraper{
+        margin: 0 .5rem .7rem .5rem;
+        padding:.5rem;
+        .feauture-card{
+            flex-direction: column;
+            justify-content: center;
+            .feauture-card-icon{
+                margin: 0 0 .4rem 0;
+                font-size:1.5rem;
+            }
+            .h5{
+                font-size:.8rem;
+            }
+        }
+    }
 }
