@@ -13,27 +13,46 @@ import Followers from './Followers'
 import Delivered from './Delivered'
 import './css/account.css';
 
-
-const accountLinks = [
-    {text:'Clients', icon:<BsPeople className="sidebar-nav-icon"  />},
-    {text:'Orders', icon:<FaGoogleWallet className="sidebar-nav-icon"  />},
-    {text:'Adverts', icon:<BsCardChecklist className="sidebar-nav-icon"  />},
-    {text:'Followers', icon:<AiOutlineUserSwitch className="sidebar-nav-icon"  />},
-    {text:'Delivered', icon:<FaTruckLoading className="sidebar-nav-icon"  />},
-    {text:'Setting', icon:<FaCog className="sidebar-nav-icon"  />},
-]
+// const ordersData = [
+//   {
+//     _id:1,
+//     client:'Deng Bol',
+//     item:'Phones',
+//     qty:20,
+//     status:false
+//   },
+//   {
+//     _id:2,
+//     client:'Musa Bol',
+//     item:'Laptop',
+//     qty:2,
+//     status:false
+//   },
+//   {
+//     _id:3,
+//     client:'Deng Bol',
+//     item:'Phones',
+//     qty:20,
+//     status:false
+//   },
+//   {
+//     _id:4,
+//     client:'Musa Bol',
+//     item:'Laptop',
+//     qty:2,
+//     status:false
+//   },
+// ]
 
 export default function Account() {
 
   const {authUser} = useAuthContext()
   const {adverts} = useItemsApi()
   const [activePage, toggleActivePage] = useState('Dashboard');
+  // const [ordersData, setOrdersData] = useState([]);
+  const ordersData = []
 
-  const handleTogglePage = e => {
-    toggleActivePage(e)
-    // window.scrollTo(0, 0);
-  }
-
+  const handleTogglePage = e =>  toggleActivePage(e)
 
   const userItems = adverts.filter(item => item.seller._id === authUser.profile._id)
  
@@ -41,19 +60,70 @@ export default function Account() {
     return (<FaArrowLeft className='back-btn sm-screen' onClick={() => toggleActivePage('Dashboard')} />)
   }
 
+  function AccountNavLinks(){
+    return(
+      <div className="user-account-nav">
+        <div className="account-links-wraper dashboard-link">
+          <AiOutlineDashboard className="sidebar-nav-icon"  />
+          <span className="nav-link">Dashboard</span>
+        </div>
+        <div className="account-links-wraper badge-wraper" onClick={() => handleTogglePage('Clients')}>
+          <BsPeople className="sidebar-nav-icon"  />
+          <span className="nav-link">Clients</span>
+          <span className="badge-card">10</span>
+        </div>
+        <div className="account-links-wraper badge-wraper" onClick={() => handleTogglePage('Orders')}>
+          <FaGoogleWallet className="sidebar-nav-icon"  />
+          <span className="nav-link">Orders</span>
+          {ordersData.length >= 1 && <span className="badge-card">{ordersData.length}</span>}
+        </div>
+        <div className="account-links-wraper badge-wraper" onClick={() => handleTogglePage('Adverts')}>
+          <BsCardChecklist className="sidebar-nav-icon"  />
+          <span className="nav-link">Adverts</span>
+          {userItems.length >= 1 && <span className="badge-card">{userItems.length}</span>}
+        </div>
+        <div className="account-links-wraper" onClick={() => handleTogglePage('Followers')}>
+          <AiOutlineUserSwitch className="sidebar-nav-icon"  />
+          <span className="nav-link">Followers</span>
+        </div>
+        <div className="account-links-wraper" onClick={() => handleTogglePage('Delivered')}>
+          <FaTruckLoading className="sidebar-nav-icon"  />
+          <span className="nav-link">Delivered</span>
+        </div>
+        <div className="account-links-wraper" onClick={() => handleTogglePage('Setting')}>
+          <FaCog className="sidebar-nav-icon"  />
+          <span className="nav-link">Setting</span>
+        </div>
+      </div>
+    )
+  }
+  
+  function Dashboard() {
+    return (
+      <>
+      <div className="sm-screen">
+        <Profile user={authUser.profile} />
+        <AccountNavLinks />
+      </div>
+      <div className="section-container">
+        Dashboard
+      </div>
+      </>
+    )
+  }
 
   return (
     <div className="my-container">
       <div className="app-content d-flex">
         <div className="app-content-sidebar user-account-content lg-screen">
           <Profile user={authUser.profile} />
-          <AccountNavLinks handleTogglePage={handleTogglePage} />
+          <AccountNavLinks handleTogglePage={handleTogglePage} userItems={userItems} />
         </div>
         <div className="app-content-main">
-          {activePage === 'Dashboard' && <Dashboard user={authUser.profile} handleTogglePage={handleTogglePage} />}
+          {activePage === 'Dashboard' && <Dashboard />}
           {activePage === 'Adverts' && <UseItems items={userItems} AccountBackBtn={<AccountBackBtn />} />} 
           {activePage === 'Clients' && <Clients clients={[]} AccountBackBtn={<AccountBackBtn />} />} 
-          {activePage === 'Orders' && <Orders orders={[]} AccountBackBtn={<AccountBackBtn />} />} 
+          {activePage === 'Orders' && <Orders orders={ordersData} AccountBackBtn={<AccountBackBtn />} />} 
           {activePage === 'Followers' && <Followers followers={[]} AccountBackBtn={<AccountBackBtn />} />} 
           {activePage === 'Delivered' && <Delivered delivered={[]} AccountBackBtn={<AccountBackBtn />} />} 
           {activePage === 'Setting' && <Setting setting={[]} AccountBackBtn={<AccountBackBtn />} />} 
@@ -64,49 +134,3 @@ export default function Account() {
 }
 
 
-function AccountNavLinks({handleTogglePage}){
-  return(
-    <div className="user-account-nav">
-      <div className="account-links-wraper dashboard-link">
-        <AiOutlineDashboard className="sidebar-nav-icon"  />
-        <span className="nav-link">Dashboard</span>
-      </div>
-      {accountLinks.map((link, key) => (
-        <div className="account-links-wraper" key={key} onClick={() => handleTogglePage(link.text)}>
-          {link.icon}
-          <span className="nav-link">
-            {link.text}
-          </span>
-        </div>
-      ))}
-      {/* <ul>
-        <li onClick={() => handleTogglePage('Dashboard')}>
-          <AiOutlineDashboard className="sidebar-nav-icon"  />
-          <span className="nav-link">Dashboard</span>
-        </li>
-        {accountLinks.map((link, key) => (
-          <li key={key} onClick={() => handleTogglePage(link.text)}>
-            {link.icon}
-            <span className="nav-link">
-                {link.text}
-            </span>
-          </li>
-        ))}
-      </ul> */}
-    </div>
-  )
-}
-
-function Dashboard({user, handleTogglePage}) {
-  return (
-    <>
-    <div className="sm-screen">
-      <Profile user={user} />
-      <AccountNavLinks handleTogglePage={handleTogglePage} />
-    </div>
-    <div className="section-container">
-      Dashboard
-    </div>
-    </>
-  )
-}

@@ -4,7 +4,7 @@
 
 .user-account-profile {
   padding: 1rem;
-  background-color: rgb(33, 200, 230);
+  background-color: var(--dark);
 }
 .user-account-profile .profile-image {
   width: 70px;
@@ -32,9 +32,13 @@
   color: inherit;
 }
 
+.user-account-header {
+  margin-bottom: 1rem;
+}
+
 @media screen and (max-width: 950px) {
   .account-section {
-    margin-top: 0.5rem;
+    margin-top: 0.6rem !important;
   }
 
   .user-account-profile {
@@ -53,7 +57,6 @@
   .user-account-nav {
     margin: 0.5rem 0;
     display: grid;
-    grid-gap: 3vmin;
     background-color: var(--white);
     grid-template-columns: repeat(3, 1fr);
   }
@@ -62,8 +65,28 @@
     flex-direction: column;
   }
   .user-account-nav .sidebar-nav-icon {
-    color: var(--blue-bg);
-    font-size: 1.8rem;
+    color: var(--green);
+    font-size: 1.9rem;
+    opacity: 0.7;
+  }
+
+  .badge-wraper {
+    position: relative;
+  }
+  .badge-wraper .badge-card {
+    height: 22px;
+    width: 22px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: red;
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    position: absolute;
+    top: 0;
+    right: 15px;
   }
 
   .user-account-header {
@@ -72,6 +95,6 @@
   }
 
   .back-btn {
-    margin-right: 0.5rem;
+    margin-right: 2rem;
   }
 }/*# sourceMappingURL=account.css.map */

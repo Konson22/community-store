@@ -16,15 +16,17 @@
 }
 
 :root{
-    --green:#dd7d0e;
-    --dark:#6b6b6b;
+    --green:#25da01;
+    --dark:#494949;
     --white:#fff;
     --mrg-top:2rem;
+    --gradient-bg:linear-gradient(130deg, rgb(0, 255, 0), rgb(220, 249, 22));
 }
 
 body{
     color: rgb(128, 126, 126);
     background-color: rgb(230, 230, 230);
+    scroll-behavior: smooth;
 }
 
 p, span, i{
@@ -33,6 +35,8 @@ p, span, i{
 h1,h2,h3,h4,h5,h6{
     margin: 0;
     color: rgb(121, 121, 121);
+    font-family:'Staatliches';
+
 }
 
 .elips-text{
@@ -50,6 +54,11 @@ h1,h2,h3,h4,h5,h6{
 img{
     height:100%;
     width: 100%;
+}
+
+.my-btn{
+    background-image: var(--gradient-bg);
+    text-decoration: none;
 }
 
 .my-container{
@@ -90,14 +99,57 @@ img{
 iframe{
     display:none !important;
 }
-// .loader-container{
-//     width:100%;
-//     height:100%;
-//     background-image: linear-gradient(160 deg, rgba(29, 29, 29, 0.5), rgba(90, 90, 90, 0.5));
-//     position:absolute;
-//     top:0;
-//     left:0;
-// }
+
+
+//  start of footer style
+.footer-wraper{
+    padding:2rem 5%;
+    color:var(--white);
+    background-color: var(--dark);
+    .footer-top{
+        margin: 0 auto 2.5rem auto;
+        width:50%;
+    }
+    .footer-botttom{
+        .sebcribe-container{
+            padding-right: 4rem;
+            flex:2;
+            input, button{
+                padding:0 .7rem;
+                height:3rem;
+                border:none;
+            }
+            input{
+                flex:1;
+            }
+            button{
+                background-color: var(--green);
+            }
+        }
+        .footer-content{
+            flex:1;
+        }
+        .footer-list{
+            margin-top: .7rem;
+        }
+    }
+    .footer-policy{
+        margin:0 auto;
+        width: 35%;
+        justify-content: space-evenly;
+        span{
+            margin: 0 1rem;
+        }
+    }
+
+    .footer-list-icon{
+        margin-right: .7rem;
+        font-size:1.3rem;
+    }
+    h5{
+        color:var(--white);
+    }
+}
 
 .lg-screen{
     display: block !important;
@@ -120,23 +172,30 @@ iframe{
     }
     .my-container{
         padding: 0;
+        margin:0;
         width:100%;
     }
     .app-wraper{
+        margin:0;
+        width:100%;
         margin-bottom: 4rem;
     }
 
     .app-content{
         margin: 0;
+        width:100%;
         .app-content-main{
             padding: 0 .5rem;
             margin: 0;
+            width:100%;
         }
     }
 
     
     .section-container{
+        width:100%;
         padding: .6rem;
+        margin:0;
         margin-bottom: 1rem;
         background-color: var(--white);
     }
@@ -144,4 +203,59 @@ iframe{
         margin-bottom: 1rem;
     }
     
+    //  start of footer style
+    .footer-wraper{
+        padding:1rem;
+        .footer-top{
+            margin: 0 auto 2.5rem auto;
+            width:100%;
+        }
+        .footer-botttom{
+            flex-direction: column;
+            .sebcribe-container{
+                padding: 0;
+                width:100%;
+                input, button{
+                    padding:0 .7rem;
+                    height:3rem;
+                    border:none;
+                }
+                input{
+                    flex:1;
+                }
+                button{
+                    background-color: var(--green);
+                }
+            }
+            .footer-content{
+                width:100%;
+                margin-top: 2rem;
+                .social-media{
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+            
+        }
+        .footer-policy{
+            padding-top: 1rem;
+            width: 100%;
+            border-top:2px solid #ccc;
+            justify-content: space-between;
+            span{
+                margin: 0;
+            }
+        }
+        .footer-list-icon{
+            margin: 0;
+            font-size:1.8rem;
+        }
+        .footer-list-icon.contact{
+            margin-right: .6rem;
+        }
+       
+        h5{
+            margin-bottom:.6rem;
+        }
+    }
 }

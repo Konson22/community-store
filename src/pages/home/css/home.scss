@@ -5,20 +5,21 @@
     .carousel-wraper{
         flex-basis: 68%;
         position:relative;
+        height:350px;
         .carousel-hero{
             height:350px;
             flex:1;
-            background-color: red;
+            background-color: rgb(168, 168, 168);
             background-size: 100% 100%;
         }
         .carousel-hero-content{
-            padding:2.5rem;
+            padding:0 0 0 5rem;
             color:var(--white);
-            width:70%;
+            width:53%;
         }
         h1{
             color:var(--white);
-            font-size: 2.5rem;
+            font-size: 3rem;
         }
         .hHJTFD{
             margin:0 !important;
@@ -114,9 +115,10 @@
         height:auto;
         display: block;
         .carousel-wraper{
+            height:26vh;
             flex-basis: 100%;
             .carousel-hero{
-                height:28vh;
+                height:26vh;
                 flex:1;
             }
             .carousel-hero-content{
@@ -134,18 +136,7 @@
             .rec-pagination{
                 display: flex !important;
                 position:absolute;
-                bottom:0;
-            }
-        }
-        .hero-wraper{
-            width:100%;
-            height:30vh;
-            .hero-content {
-                padding:1.5rem;
-                width:100%;
-            }
-            h1{
-                font-size: 1.9rem;
+                bottom:.6rem;
             }
         }
         .header-categories{
@@ -160,7 +151,7 @@
             span{
                 padding:.5rem;
                 font-size: .9rem;
-                font-weight: 500;
+                font-weight: 600;
             }
         }
     }

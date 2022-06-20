@@ -11,16 +11,19 @@
 .navbar-wraper .nav-link {
   color: var(--white);
 }
+.navbar-wraper .nav-link:hover, .navbar-wraper .nav-link:focus, .navbar-wraper .nav-link:focus-visible, .navbar-wraper .nav-link:focus-within {
+  color: var(--white);
+}
 .navbar-wraper .nav-icon {
   font-size: 1.4rem;
 }
 .navbar-wraper .nav-btn {
-  background-color: var(--green);
+  background-image: var(--gradient-bg);
 }
 
 .nav-top-content {
   padding: 0 5%;
-  border-bottom: 2px solid #807d7d;
+  border-bottom: 2px solid #6b6b6b;
 }
 .nav-top-content .lang-img {
   width: 25px !important;
@@ -38,12 +41,26 @@
   padding: 1.5rem 5%;
 }
 .nav-center-content .logo-wraper img {
+  width: 4rem;
   height: 4rem;
 }
-.nav-center-content .logo-wraper .logo-text {
+.nav-center-content .logo-wraper .logo-text-wraper {
+  margin-left: 0.7rem;
   flex: 1;
-  font-size: 1.8rem;
+}
+.nav-center-content .logo-wraper .logo-text-wraper .logo-text {
+  font-family: "Staatliches";
+  font-size: 1.7rem;
   font-weight: 700;
+  background-image: var(--gradient-bg);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav-center-content .logo-wraper .logo-text-wraper p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.7rem;
 }
 .nav-center-content .nav-search-wraper {
   padding: 0 4%;
@@ -54,7 +71,7 @@
 }
 .nav-center-content .cart-wraper .cart-icon-box {
   padding: 0.3rem 0.5rem 0.3rem 0.3rem;
-  background-color: var(--green);
+  background-image: var(--gradient-bg);
 }
 .nav-center-content .cart-wraper .cart-icon-box .nav-icon {
   font-size: 1.9rem;
@@ -94,8 +111,8 @@
   width: 100%;
 }
 .search-container button {
-  color: var(--white);
   background-color: var(--green);
+  background-image: var(--gradient-bg);
 }
 .search-container .dropdown-toggle.nav-link {
   color: #333;
@@ -103,7 +120,7 @@
 }
 
 .nav-bottom-content {
-  padding: 0.4rem 5%;
+  padding: 0.5rem 5%;
   border-radius: 5px;
 }
 
@@ -119,10 +136,20 @@
     height: 3.5rem;
   }
   .nav-center-content .logo-wraper img {
+    width: 2.8rem;
     height: 2.8rem;
   }
-  .nav-center-content .logo-wraper .logo-text {
-    display: none;
+  .nav-center-content .logo-wraper .logo-text-wraper {
+    margin-left: 0.7rem;
+    flex: 1;
+  }
+  .nav-center-content .logo-wraper .logo-text-wraper .logo-text {
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  .nav-center-content .logo-wraper .logo-text-wraper p {
+    font-size: 0.6rem;
   }
   .nav-center-content .cart-wraper .nav-link {
     padding: 0.5rem;
@@ -180,13 +207,12 @@
     flex: 1;
     color: inherit;
     text-decoration: none;
-    background-color: var(--gray);
     background-color: var(--white);
   }
   .search-container input, .search-container button {
     padding: 0;
     height: auto;
-    background-color: transparent;
+    background-image: none;
   }
   .search-container input {
     padding: 0.5rem;

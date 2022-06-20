@@ -3,8 +3,8 @@ import {NavLink} from 'react-router-dom'
 import {FaShoppingCart, FaRegUser, FaRandom, FaRegHeart, FaFacebook, FaTwitter, FaInstagram} from 'react-icons/fa'
 import {NavDropdown} from 'react-bootstrap'
 import { categoriesList } from '../../assets/data/data'
-// import logo from '../../assets/images/logomage.png'
-import logo from '../../assets/images/pngaaa.com-3108680.png'
+// import logo from '../../assets/images/pngaaa.com-3108680.png'
+import logo from '../../assets/images/my-logo.png'
 import { useAuthContext } from '../../contexts/AuthUserContextProvider'
 import {BsHouse, BsCartDash, BsSearch, BsBell} from 'react-icons/bs'
 import {FiPlusCircle} from 'react-icons/fi'
@@ -86,7 +86,10 @@ export default function Navbar() {
       <div className="nav-center-content d-flex justify-content-between align-items-center">
         <div className="logo-wraper d-flex align-items-center">
           <img src={logo} alt='logo' />
-          {/* <div className="logo-text">2XConnect</div> */}
+          <div className='logo-text-wraper'>
+            <div className="logo-text">121 Business</div>
+            <p>Connecting For Business</p>
+          </div>
         </div>
         <div className="nav-search-wraper">
           <SearchBar />
@@ -112,11 +115,11 @@ export default function Navbar() {
         <div className="categories-container">
           <NavDropdown title="Category">
             <NavDropdown.Item>
-              <NavLink className='nav-link' to={`/store/all`}>All</NavLink>
+              <NavLink className='nav-link text-dark' to={`/items/all`}>All</NavLink>
             </NavDropdown.Item>
             {categoriesList.map((link, key) => (
               <NavDropdown.Item className="nav-item" key={key}>
-                <NavLink className='nav-link' to={`/store/${link.value}`}>{link.name}</NavLink>
+                <NavLink className='nav-link text-dark' to={`/items/${link.value}`}>{link.name}</NavLink>
               </NavDropdown.Item>
             ))}
           </NavDropdown>
@@ -128,7 +131,7 @@ export default function Navbar() {
             </li>
             {categoriesList.map((link, key) => (
               <li className="nav-item" key={key}>
-                <NavLink className='nav-link' to={`/items/${link.value}`}>{link.name}</NavLink>
+                <NavLink className='nav-link' activeClassName='active-link' to={`/items/${link.value}`}>{link.name}</NavLink>
               </li>
             ))}
           </ul>

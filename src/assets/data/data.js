@@ -3,7 +3,7 @@
 export const categoriesList = [
     { name:'Electronics', value:'electronics' },
     { name:'Fashion', value:'fashion' },
-    { name:'Beauty & Health', value:'beauty_health' },
+    { name:'Beauty & Health', value:'health-and-beauty' },
     { name:'Auto & Spare parts', value:'auto' },
     { name:'Home Decore', value:'home-decore' },
     { name:'Sport', value:'sport' },

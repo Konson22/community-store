@@ -97,8 +97,8 @@ export default function Upload() {
                             </select>
                         </div>
                         <div className="input-content col-md-6">
-                            <label htmlFor="price">Price</label>
-                            <input type='text' name='price' placeholder='Item name' onChange={handleInputsData} />
+                            <label htmlFor="price">Set Price</label>
+                            <input type='text' name='price' placeholder='0.00' onChange={handleInputsData} />
                         </div>
                         <div className="input-content col-md-6">
                             <label htmlFor="currency">Currency</label>

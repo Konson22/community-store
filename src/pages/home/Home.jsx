@@ -14,6 +14,7 @@ import electronicBackground from '../../assets/images/675620d0d624805.jpg'
 import TopSellers from './TopSellers'
 import Carousel from 'react-elastic-carousel'
 import './css/home.css'
+import Footer from '../../components/footer/Footer'
 
 
 const breakPoints = [
@@ -57,6 +58,7 @@ export default function Home() {
   }
 
   return (
+    <main>
     <div className="my-container">
       <header className='header-wraper'>
         <div className="carousel-wraper d-flex">
@@ -77,27 +79,27 @@ export default function Home() {
           </Carousel>
         </div>
         <div className="header-categories">
-          <Link className="catergory-card" to='/store/electronics'>
+          <Link className="catergory-card" to='/items/auto'>
             <img src={carImage} alt="" />
-            <span>Auto & Spare parts</span>
+            <span>Auto & Spare</span>
           </Link>
-          <Link className="catergory-card" to='/store/furniture'>
+          <Link className="catergory-card" to='/items/furniture'>
             <LazyImage src={furnitureImage} alt="" />
             <span>Furniture</span>
           </Link>
-          <Link className="catergory-card" to='/store/fashion'>
+          <Link className="catergory-card" to='/items/fashion'>
             <LazyImage src={fashionImage} alt="" />
             <span>Fashion</span>
           </Link>
-          <Link className="catergory-card" to='/store/electronics'>
+          <Link className="catergory-card" to='/items/electronics'>
             <LazyImage src={electronicImage} alt="" />
             <span>Electronics</span>
           </Link>
-          <Link className="catergory-card" to='/store/electronics'>
+          <Link className="catergory-card" to='/items/health-and-beauty'>
             <LazyImage src={electronicImage} alt="" />
             <span>Health & Beauty</span>
           </Link>
-          <Link className="catergory-card" to='/store/electronics'>
+          <Link className="catergory-card" to='/items/electronics'>
             <LazyImage src={electronicImage} alt="" />
             <span>Electronics</span>
           </Link>
@@ -148,14 +150,21 @@ export default function Home() {
         <div className="app-content-main">
          {itemsHolder}
         </div>
-      </div>
+      </div> 
     </div>
+    <Footer />
+    </main>
   )
 }
 
 
 
 const carouselList = [
+  {
+    id:3,
+    text:'Your Favorite Items Made Affordable For You',
+    image:electronicBackground,
+  },
   {
     id:1,
     text:'Your Favorite Items Made Affordable For You',
@@ -166,11 +175,6 @@ const carouselList = [
   id:2,
   text:'Furnish your home on tight budget',
   image:decorateBackground,
-  },
-  {
-    id:3,
-    text:'Explore more and Engage more people',
-    image:electronicBackground,
   },
   {
     id:4,
