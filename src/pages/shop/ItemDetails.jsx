@@ -57,9 +57,7 @@ function Details({item}){
             </div>
             <div className="item-text">
                 <h4>{item.title}</h4>
-                <p>{item.description} My supervisor authorized me to finish the rapid distribution of hygiene kits to over 3000
-                    refugees within two days because there was influx of refugees in the camps.
-                </p>
+                <p>{item.description}</p>
                 <div className='h5 my-3'>
                     <span className='price-value'>{item.price}</span> {item.currency === 'USD' ? '$' : 'SSP'}
                 </div>

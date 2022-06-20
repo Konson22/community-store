@@ -17,7 +17,7 @@ export default function Items({items, cName, isAuthor = false}) {
                     <p className="price-text">{item.price}$</p>
                     <div className="price-wraper d-flex justify-content-between mt-2">
                         <Link className='my-btn btn btn-sm text-white' to={`/item/${item._id}`}>Details</Link>
-                        {isAuthor && <Link className='btn btn-success btn-sm text-white' to={`/item/${item._id}`}>Edit</Link>}
+                        {/* {isAuthor && <Link className='btn btn-success btn-sm text-white' to={`/item/${item._id}`}>Edit</Link>} */}
                         {isAuthor && <Link className='btn btn-danger btn-sm text-white' to={`/item/${item._id}`}>Delete</Link>}
                     </div>
                 </div>

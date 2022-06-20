@@ -6,9 +6,10 @@
     .form-content{
         padding:2.5rem;
         width:40%;
-        color: rgb(255, 255, 255);
-        background-color: rgb(240, 238, 238);
-        background-image: linear-gradient(135deg, #177cdb, rgb(39, 180, 245));
+        // color: rgb(255, 255, 255);
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+        background-color: #fff;
+        // background-image: linear-gradient(135deg, #177cdb, rgb(39, 180, 245));
     }
     .input-content{
         margin-bottom: 1rem;
