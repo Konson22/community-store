@@ -22,6 +22,7 @@
 }
 .g-5 .item-card-image {
   height: 130px;
+  width: 100%;
 }
 
 .img-placeholder {

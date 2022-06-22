@@ -19,7 +19,7 @@
   --dark:#494949;
   --white:#fff;
   --mrg-top:2rem;
-  --gradient-bg:linear-gradient(130deg, rgb(0, 255, 0), rgb(220, 249, 22));
+  --gradient-bg:linear-gradient(130deg, rgb(0, 255, 0), rgb(192, 221, 2));
 }
 
 body {
@@ -35,7 +35,6 @@ p, span, i {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   color: rgb(121, 121, 121);
-  font-family: "Staatliches";
 }
 
 .elips-text {
@@ -157,6 +156,14 @@ iframe {
 }
 
 @media screen and (max-width: 950px) {
+  body {
+    font-size: 15px;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
   .lg-screen, .nav-search-wraper, .cart-wraper,
 .app-content .app-content-sidebar,
 .nav-top-content, .categories-container, .dashboard-link, .links-container {
@@ -221,12 +228,12 @@ iframe {
     width: 100%;
   }
   .footer-wraper .footer-botttom .sebcribe-container input, .footer-wraper .footer-botttom .sebcribe-container button {
-    padding: 0 0.7rem;
-    height: 3rem;
-    border: none;
+    padding: 0 0.4rem;
+    height: 2.5rem;
+    font-size: 0.9rem;
   }
   .footer-wraper .footer-botttom .sebcribe-container input {
-    flex: 1;
+    flex: auto;
   }
   .footer-wraper .footer-botttom .sebcribe-container button {
     background-color: var(--green);
@@ -254,6 +261,7 @@ iframe {
   }
   .footer-wraper .footer-list-icon.contact {
     margin-right: 0.6rem;
+    font-size: 1.3rem;
   }
   .footer-wraper h5 {
     margin-bottom: 0.6rem;

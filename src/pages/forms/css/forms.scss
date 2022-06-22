@@ -20,7 +20,7 @@
             padding:.6rem;
             height:3rem;
             border:none;
-            background-color: var(--white);
+            background-color: #eee;
             outline: none;
             width:100%;
         }
@@ -119,7 +119,6 @@ input[type="file"]{
         .form-content{
             padding:1rem;
             width:100%;
-            background-color: rgb(240, 238, 238);
         }
         .input-content{
             margin-bottom: 1rem;
@@ -130,7 +129,6 @@ input[type="file"]{
                 padding:.6rem;
                 height:3rem;
                 border:none;
-                background-color: var(--white);
                 outline: none;
                 width:100%;
             }

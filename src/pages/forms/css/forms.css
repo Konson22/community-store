@@ -6,9 +6,8 @@
 .form-wraper .form-content {
   padding: 2.5rem;
   width: 40%;
-  color: rgb(255, 255, 255);
-  background-color: rgb(240, 238, 238);
-  background-image: linear-gradient(135deg, #177cdb, rgb(39, 180, 245));
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
 }
 .form-wraper .input-content {
   margin-bottom: 1rem;
@@ -20,7 +19,7 @@
   padding: 0.6rem;
   height: 3rem;
   border: none;
-  background-color: var(--white);
+  background-color: #eee;
   outline: none;
   width: 100%;
 }
@@ -128,7 +127,6 @@ input[type=file] {
   .form-wraper .form-content {
     padding: 1rem;
     width: 100%;
-    background-color: rgb(240, 238, 238);
   }
   .form-wraper .input-content {
     margin-bottom: 1rem;
@@ -140,7 +138,6 @@ input[type=file] {
     padding: 0.6rem;
     height: 3rem;
     border: none;
-    background-color: var(--white);
     outline: none;
     width: 100%;
   }
